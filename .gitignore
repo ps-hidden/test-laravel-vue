@@ -1,0 +1,8 @@
+.git
+.idea
+.phpunit.result.cache
+composer.lock
+package-lock.json
+node_modules
+vendor
+/public/storage

@@ -1,0 +1,35 @@
+@import "./var"
+@import "./animation"
+@import "./base"
+
+#app
+  min-height: 100vh
+  overflow-y: auto
+  overflow-x: hidden
+  &.loading
+    &:after
+      background: rgba(#3f536e,.6)
+      content: ""
+      display: block
+      height: 100%
+      left: 0
+      position: fixed
+      top: 0
+      width: 100%
+      z-index: 9998
+    &:before
+      animation: loading 2s infinite linear
+      background: rgba(#fff, .9)
+      border-radius: 20px
+      content: ""
+      display: block
+      height: 40px
+      left: 50%
+      position: fixed
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 40px
+      z-index: 9999
+
+.ant-table-body
+  overflow-x: auto !important

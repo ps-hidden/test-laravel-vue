@@ -1,0 +1,153 @@
+
+/* Vue Animation */
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .3s
+.fade-enter, .fade-leave-to
+  opacity: 0
+
+
+.slideTop-leave-active,
+.slideTop-enter-active
+  transition: opacity 1s, transform 1s
+.slideTop-leave-to,
+.slideTop-enter
+  opacity: 0
+.slideTop-leave-to
+  transform: translate(0, -100%)
+.slideTop-enter
+  transform: translate(0, -100%)
+
+
+@media (min-width: 768px)
+  /* Classes for simple animations of blocks */
+  .animate
+    animation-duration: 1.5s
+    &:not(.anm-done)
+      opacity: 0
+    &.anm-opacity.anm-done
+      animation-name: animateOpacity
+    &.anm-center.anm-done
+      animation-name: animateCenter
+    &.anm-rotate.anm-done
+      animation-name: animateRotate
+    &.anm-top.anm-done
+      animation-name: animateTop
+    &.anm-bottom.anm-done
+      animation-name: animateBottom
+    &.anm-left.anm-done
+      animation-name: animateLeft
+    &.anm-right.anm-done
+      animation-name: animateRight
+    &.anm-top-left.anm-done
+      animation-name: animateTopLeft
+    &.anm-top-right.anm-done
+      animation-name: animateTopRight
+    &.anm-bottom-left.anm-done
+      animation-name: animateBottomLeft
+    &.anm-bottom-right.anm-done
+      animation-name: animateBottomRight
+
+
+
+/* Keyframes */
+
+@keyframes loading
+  0%
+    opacity: 1
+    transform: scale(0)
+  100%
+    opacity: 0
+    transform: scale(1)
+
+@keyframes bar
+  0%, 100%
+    opacity: 1
+  50%
+    opacity: 0
+
+@keyframes animateOpacity
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes animateCenter
+  0%
+    opacity: 0
+    transform: scale(0)
+  100%
+    opacity: 1
+    transform: scale(1)
+
+@keyframes animateRotate
+  0%
+    opacity: 0
+    transform: rotate(-720deg)
+  100%
+    opacity: 1
+    transform: rotate(0)
+
+@keyframes animateTop
+  0%
+    opacity: 0
+    transform: translateY(50%)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes animateBottom
+  0%
+    opacity: 0
+    transform: translateY(-50%)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes animateLeft
+  0%
+    opacity: 0
+    transform: translateX(50%)
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes animateRight
+  0%
+    opacity: 0
+    transform: translateX(-50%)
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes animateTopLeft
+  0%
+    opacity: 0
+    transform: translate(50%, 50%)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes animateTopRight
+  0%
+    opacity: 0
+    transform: translate(-50%, 50%)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes animateBottomLeft
+  0%
+    opacity: 0
+    transform: translate(50%, -50%)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
+
+@keyframes animateBottomRight
+  0%
+    opacity: 0
+    transform: translate(-50%, -50%)
+  100%
+    opacity: 1
+    transform: translate(0, 0)
