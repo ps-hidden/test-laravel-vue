@@ -30,7 +30,7 @@ Route::middleware('can:isModerator')->group(function() {
 
 
 Route::middleware('can:isAdmin')->group(function() {
-    Route::get('companies/by-name', 'Crud\CompanyCrud@getByName');
+    Route::get('companies-by-name', 'Crud\CompanyCrud@getByName');
 
     Route::resource('companies', 'Crud\CompanyCrud')->only(['store', 'update', 'destroy']);
     Route::resource('employees', 'Crud\EmployeeCrud')->only(['store', 'update', 'destroy']);

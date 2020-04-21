@@ -20,7 +20,7 @@ export default {
       })
     },
     handleSearch (el) {
-      this.$http.get(`companies/by-name?name=${el.target.value}`).then(r => {
+      this.$http.get(`companies-by-name?name=${el.target.value}`).then(r => {
         this.array = r
       })
     },
